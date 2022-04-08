@@ -1,10 +1,10 @@
 export class Player{
-    _name:string;
-    _score:number;
+    private _name:string;
+    private _score:number;
     play(cup):void{
 
     }
     printScore():void{
-        
+
     }
 }
