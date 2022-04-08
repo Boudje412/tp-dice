@@ -2,7 +2,7 @@ import {Cup} from "./cup"
 import {Dice} from "./dice"
 export class Player{
     private _name:string;
-    private _score:number;
+    public _score:number;
     constructor(name:string)
     {
         this._name = name;

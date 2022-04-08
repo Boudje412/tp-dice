@@ -1,19 +1,19 @@
 import { Dice } from "./dice";
 export class Cup{
     private _value: number;
-    constructor(value: number)
-    {
-        this._value = value;
-    }
-    throw(dice:Dice):number[]
+    private _dices: Array<Dice>;
+    throw():number[]
     {
         let i=this._value;
         let result=[]
-        while(i>0)
-        {
-            result.push(dice.roll());
-            i--
-        }
+        this._dices.forEach(dice =>{
+            dice.roll();
+        })
+        // while(i>0)
+        // {
+        //     result.push(_dices.roll());
+        //     i--
+        // }
         return result;
     }
     printScore(score:number[]):void
